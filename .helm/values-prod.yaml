@@ -1,0 +1,28 @@
+env: prod
+
+image:
+  tag: 50b96d7aad42c6ff1127ffa0c00470e9c708eadf
+
+
+ingress:
+  enabled: true
+  auth:
+    enabled: false
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/acme-challenge-type: dns01
+    cert-manager.io/cluster-issuer: letsencrypt
+    kubernetes.io/ingress.class: nginx
+  hosts:
+    - host: lunart.io
+      paths:
+      - /
+  tls:
+    - secretName: lunart-io-tls
+      hosts:
+      - lunart.io
+      - www.lunart.io
+
+autoscaling:
+  minReplicas: 2
+  maxReplicas: 50

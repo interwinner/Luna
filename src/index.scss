@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import './styles/mixins';
+@import './styles/variables';
+@import './styles/reboot';
+@import './styles/colors';
+@import './styles/utils';
+
+@font-face {
+  font-family: 'shapiro75_heavy_extd';
+  src: url('/fonts/shapiro-75heavyextd.woff2') format('woff2'),
+    url('/fonts/shapiro-75heavyextd.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shapiro65_light_heavy_wide';
+  src: url('/fonts/shapiro-65lightheavywide.woff2') format('woff2'),
+    url('/fonts/shapiro-65lightheavywide.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

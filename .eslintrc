@@ -1,0 +1,100 @@
+{
+    "extends": [
+      "react-app",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "rules": {
+      "consistent-return": 2,
+      "generator-star-spacing": [
+        2,
+        {
+          "before": false,
+          "after": true
+        }
+      ],
+      "no-cond-assign": 2,
+      "no-duplicate-case": 2,
+      "no-empty-character-class": 2,
+      "no-func-assign": 2,
+      "no-inner-declarations": [
+        2,
+        "functions"
+      ],
+      "no-invalid-regexp": 2,
+      "no-irregular-whitespace": 2,
+      "no-iterator": 2,
+      "no-label-var": 2,
+      "no-extra-bind": 2,
+      "no-eval": 2,
+      "no-ex-assign": 2,
+      "no-nested-ternary": 0,
+      "no-new": 2,
+      "no-unneeded-ternary": 2,
+      "no-unreachable": 2,
+      "no-unused-expressions": 0,
+      "no-unused-vars": [
+        0,
+        {
+          "vars": "all",
+          "args": "none",
+          "ignoreRestSiblings": true
+        }
+      ],
+      "no-with": 2,
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": 2,
+      "import/no-anonymous-default-export": [
+        "error",
+        {
+          "allowArray": true,
+          "allowArrowFunction": true,
+          "allowAnonymousClass": true,
+          "allowAnonymousFunction": true,
+          "allowCallExpression": true,
+          "allowLiteral": true,
+          "allowObject": true
+        }
+      ],
+      "jsx-a11y/anchor-is-valid": "off",
+      "jsx-a11y/anchor-has-content": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {
+          "@typescript-eslint/ban-ts-ignore": 0,
+          "@typescript-eslint/explicit-member-accessibility": 0,
+          "@typescript-eslint/explicit-function-return-type": 0,
+          "@typescript-eslint/member-delimiter-style": 0,
+          "@typescript-eslint/no-explicit-any": 0,
+          "@typescript-eslint/no-object-literal-type-assertion": 0,
+          "@typescript-eslint/no-empty-interface": 0,
+          "@typescript-eslint/no-var-requires": 0,
+          "@typescript-eslint/ban-ts-comment": 0,
+          "@typescript-eslint/ban-types": 0,
+          "@typescript-eslint/no-non-null-asserted-optional-chain": 0,
+          "react-hooks/rules-of-hooks": 0,
+          "@typescript-eslint/explicit-module-boundary-types": "off",
+          "@typescript-eslint/no-inferrable-types": 0
+        }
+      },
+      {
+        "files": [
+          "**/*styles.ts",
+          "./src/theme/definition/mixins.ts",
+          "./src/stores/extensions/**/*.ts",
+          "./src/services/api/api-client/**/*.ts",
+          "./src/serviceWorker.ts"
+        ],
+        "rules": {
+          "@typescript-eslint/explicit-module-boundary-types": [
+            "error"
+          ]
+        }
+      }
+    ]
+  }
